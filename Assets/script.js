@@ -32,10 +32,10 @@ function currentWeather(city){
         
             for (var i=0; i<6; i++){
             $("#icon"+i).attr("src","http://openweathermap.org/img/wn/"+data.daily[i].weather[0].icon+"@2x.png")
-            $("#temp"+i).text(data.daily[i].temp.day)
-            $("#humid"+i).text(data.daily[i].humidity)
-            $("#uv"+i).text(data.daily[i].uvi)
-            $("#wind"+i).text(data.daily[i].wind_speed)
+            $("#temp"+i).text("Temperature: " + data.daily[i].temp.day)
+            $("#humid"+i).text("Humidity: " + data.daily[i].humidity)
+            $("#uv"+i).text("UV Index: " + data.daily[i].uvi)
+            $("#wind"+i).text("Wind Speed: " + data.daily[i].wind_speed)
     }
         })
     })
